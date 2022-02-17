@@ -1,11 +1,19 @@
-function Title({ text, isDarkMode }) {
+
+import React, {useContext} from 'react';
+import ThemeContext from "./ThemeContext";
+
+
+function Title(props) {
+
+  const theme = useContext(ThemeContext);
+
   return (
     <h2
       className={`heading ${
-        isDarkMode ? "sub-heading-dark" : "sub-heading-light"
+        theme.isDarkMode ? "sub-heading-dark" : "sub-heading-light"
       }`}
     >
-      {text}
+      {props.text}
     </h2>
   );
 }
