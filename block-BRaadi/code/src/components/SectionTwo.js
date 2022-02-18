@@ -2,6 +2,7 @@ import React from "react";
 
 class SectionTwo extends React.Component {
   handleClick = () => {
+    console.log('clicked')
     throw new Error("An error occured!");
   };
   render() {
